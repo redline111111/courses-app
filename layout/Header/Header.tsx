@@ -1,7 +1,6 @@
 import {HeaderProps} from './Header.props';
 import styles from './Header.module.css';
 import cn from 'classnames';
-import Logo from '../logo.svg'
 import { ButtonIcon } from '../../components/ButtonIcon/ButtonIcon';
 import { motion } from 'framer-motion';
 import { Sidebar } from '../Sidebar/Sidebar';
@@ -32,7 +31,6 @@ export const Header = ({className, ...props}: HeaderProps): JSX.Element => {
 
     return (
         <header className={cn(className, styles.header)} {...props}>
-            <Logo/>
             <ButtonIcon appearance='white' icon='menu' onClick={() => setIsOpened(true)}/>
             <motion.div 
                 className={styles.mobileMenu}
